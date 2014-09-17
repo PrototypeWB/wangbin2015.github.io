@@ -15,7 +15,7 @@ owner:
   avatar:         bio-photo.jpg
   email:          bosn@outlook.com
   # Use the coder's toolbox at http://coderstoolbox.net/string/#!encoding=xml&action=encode&charset=us_ascii to encode your description into XML string
-  description:    Awesome Dude, Awesome Life
+  description:    "Programmer, Composer"
   # Social networking links used in footer. Update and remove as you like.
   twitter:        BosnMa
   facebook:       
