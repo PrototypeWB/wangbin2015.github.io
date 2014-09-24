@@ -1,9 +1,9 @@
 title:            bosn.me
 description:      "keep moving forward"
 logo:             logo.png
-disqus_shortname: hmfaysal
+disqus_shortname: Bosn
 share:            true
-dropcap:			true
+dropcap:          true
 # Change url to your domain. Leave localhost server or blank when working locally.
 # or use the hint from http://jekyllrb.com/docs/github-pages/ to keep this the same 
 # whether working locally or remotely. Start Jekyll with: jekyll serve --baseurl ''
@@ -23,10 +23,10 @@ owner:
   instagram:      
   linkedin:       BosnMa
   # For Google Authorship https://plus.google.com/authorship
-  google_plus:    
+  google_plus:    https://plus.google.com/u/0/+BosnMa
 
 # Analytics and webmaster tools stuff goes here
-google_analytics:   
+google_analytics: UA-41151903-1 
 google_verify:      
 # https://ssl.bing.com/webmaster/configure/verify/ownership Option 2 content= goes here
 bing_verify:         
