@@ -29,13 +29,13 @@ image:
 </section><!-- /#table-of-contents -->
 最近遇到个有趣的问题：“JavaScript中的值是按值传递，还是按引用传递呢？”
 
-在分析这个问题之前，我们需了解什么是按值传递(call by value)，什么是按引用传递(call by reference)。
+在分析这个问题之前，我们需了解什么是按值传递(call by value)，什么是按引用传递(call by reference)。在计算机科学里，这个部分叫求值策略(Evaluation Strategy)。它影响着在赋值、函数调用传参等情况时，值如何在变量与变量、变量作为实参与函数形参之间传递。
 
 ### 按值传递 VS. 按引用传递
 
-按值传递是最常用的计算策略。在按值传递时，函数的形参是被调用时所传实参的*副本*。修改形参的值并不会影响实参。
+按值传递是最常用的求值策略。在按值传递时，函数的形参是被调用时所传实参的*副本*。修改形参的值并不会影响实参。
 
-在按引用传递时，函数的形参接受实参的*引用*，而不再是副本。这意味着函数形参的值如果被修改，实参也会被修改。
+在按引用传递时，函数的形参接受实参的*隐式引用*，而不再是副本。这意味着函数形参的值如果被修改，实参也会被修改。
 
 按引用传递会使函数调用的追踪更加困难，有时也会引起一些微妙的BUG。
 
@@ -104,9 +104,9 @@ console.log(obj.x); // 仍然是1, obj并未被修改为100.
 
 ### 按共享传递 call by sharing
 
-准确的说，JavaScript中的所有值都是按共享传递的(call by sharing，有时也叫按对象传递、按对象共享传递)。最早由Barbara Liskov et al. 在1974年的GLU语言中提出。该计算策略被用于Python、Java、Ruby、JavaScript等多种语言。
+准确的说，JavaScript中的所有值都是按共享传递的(call by sharing，有时也叫按对象传递、按对象共享传递)。最早由[Barbara Liskov](http://en.wikipedia.org/wiki/Barbara_Liskov). 在1974年的GLU语言中提出。该求值策略被用于Python、Java、Ruby、JavaScript等多种语言。
 
-按共享传递与按引用传递的不同在于：在共享传递中对函数形参的赋值，不会影响实参的值。例如，下面例子中，不可以通过修改形参o的值，来修改obj的值。
+该策略的重点是：调用函数传参时，函数接受对象实参*引用的副本*(而不是对象副本)。 它和按引用传递的不同在于：在共享传递中对函数形参的赋值，不会影响实参的值。如下面例子中，不可以通过修改形参o的值，来修改obj的值。
 
 {% highlight javascript %}
 var obj = {x : 1};
@@ -117,7 +117,7 @@ foo(obj);
 console.log(obj.x); // 仍然是1, obj并未被修改为100.
 {% endhighlight %}
 
-然而，由于JavaScript中的对象，是可变的(mutable），形参实参共享同一个对象，修改对象中的属性，实参也会受到影响。
+然引用副本与实参引用相同的对象，对象在JS中是可变的(mutable），修改对象中的属性，实参也会受到影响。
 
 {% highlight javascript %}
 var obj = {x : 1};
@@ -163,3 +163,4 @@ obj.x; // 1, 不会因o = true改变
 ### 参考文献
 * [Wikipedia.org-Evaluation strategy](http://en.wikipedia.org/wiki/Evaluation_strategy#Call_by_reference)
 * [http://dmitrysoshnikov.com/-Evaluation Strategy](http://dmitrysoshnikov.com/ecmascript/chapter-8-evaluation-strategy/)
+
