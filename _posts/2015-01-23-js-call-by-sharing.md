@@ -140,7 +140,7 @@ console.log(obj.x); // 3, 被修改了!
 var str = "abc";
 str[0]; // "a"
 str[0] = "d";
-str; // "abc";
+str; // 仍然是"abc";赋值是无效的。没有任何办法修改字符串的内容
 {% endhighlight %}
 
 而对象就不一样了，对象是可变的。
