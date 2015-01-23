@@ -61,8 +61,9 @@ int main()
 {% endhighlight %}
 
 这里我们可以看到：
-  * a => p按值传递时，修改形参p的值(p = 27)并不影响实参(a)。p只是a的副本。
-  * b => q是按引用传递，修改形参q的值时也影响到了实参b的值。
+
+* a => p按值传递时，修改形参p的值(p = 27)并不影响实参(a)。p只是a的副本。
+* b => q是按引用传递，修改形参q的值时也影响到了实参b的值。
 
 ### 探究JS值的传递方式
 
@@ -116,7 +117,7 @@ foo(obj);
 console.log(obj.x); // 仍然是1, obj并未被修改为100.
 {% endhighlight %}
 
-然而，由于JavaScript中的对象，是可变的(mutable），形参实参指向同一个对象，修改对象中的属性，实参也会受到影响。
+然而，由于JavaScript中的对象，是可变的(mutable），形参实参共享同一个对象，修改对象中的属性，实参也会受到影响。
 
 {% highlight javascript %}
 var obj = {x : 1};
@@ -142,7 +143,7 @@ str[0] = "d";
 str; // "abc";
 {% endhighlight %}
 
-而对象就不一样了，对象值是可变的。
+而对象就不一样了，对象是可变的。
 
 {% highlight javascript %}
 var obj = {x : 1};
@@ -154,10 +155,11 @@ o = true;
 obj.x; // 1, 不会因o = true改变
 {% endhighlight %}
 
-例如这里定义变量obj，值是object，然后设置obj.x属性的值为100。而后定义另一个变量o，值仍然是这个object对象，此时obj和o两个变量的值指向同一个对象（共享同一个对象的引用）。所以修改对象的内容，对obj和o都有影响。但对象并非按引用传递，通过o = true修改了o的值，不会影响obj。
+这里定义变量obj，值是object，然后设置obj.x属性的值为100。而后定义另一个变量o，值仍然是这个object对象，此时obj和o两个变量的值指向同一个对象（共享同一个对象的引用）。所以修改对象的内容，对obj和o都有影响。但对象并非按引用传递，通过o = true修改了o的值，不会影响obj。
 
 所以JS既不是按值传递，也不是按引用传递。而是按共享传递。
 
 
-### 参考
-* 参考文献：[Wiki-Evaluation strategy](http://en.wikipedia.org/wiki/Evaluation_strategy#Call_by_reference)
+### 参考文献
+* [Wikipedia.org-Evaluation strategy](http://en.wikipedia.org/wiki/Evaluation_strategy#Call_by_reference)
+* [http://dmitrysoshnikov.com/-Evaluation Strategy](http://dmitrysoshnikov.com/ecmascript/chapter-8-evaluation-strategy/)
