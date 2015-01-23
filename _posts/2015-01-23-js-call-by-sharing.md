@@ -67,7 +67,7 @@ int main()
 
 ### 探究JS值的传递方式
 
-JavaScript的基本类型，看起来是按值传递的。
+JavaScript的基本类型，是按值传递的。
 
 {% highlight javascript %}
 var a = 1;
@@ -78,7 +78,7 @@ foo(a);
 console.log(a); // 仍为1, 未受x = 2赋值所影响
 {% endhighlight %}
 
-JavaScript的对象类型，看起来像是按引用传递。
+JavaScript的对象类型，看起来像是按引用传递。但实际不是。
 
 {% highlight javascript %}
 var obj = {x : 1};
@@ -89,7 +89,7 @@ foo(obj);
 console.log(obj.x); // 3, 被修改了!说明o和obj是同一个对象，o不是obj的副本。不是按值传递。
 {% endhighlight %}
 
-可是如果是按引用传递，修改形参o的*值*，应该影响到实参才对。
+如果是按引用传递，修改形参o的*值*，应该影响到实参才对。
 
 {% highlight javascript %}
 var obj = {x : 1};
@@ -104,7 +104,7 @@ console.log(obj.x); // 仍然是1, obj并未被修改为100.
 
 ### 按共享传递 call by sharing
 
-准确的说，JavaScript中的所有值都是按共享传递的(call by sharing，有时也叫按对象传递、按对象共享传递)。最早由[Barbara Liskov](http://en.wikipedia.org/wiki/Barbara_Liskov). 在1974年的GLU语言中提出。该求值策略被用于Python、Java、Ruby、JavaScript等多种语言。
+准确的说，JS中的基本类型按值传递，对象类型*按共享传递*的(call by sharing，也叫按对象传递、按对象共享传递)。最早由[Barbara Liskov](http://en.wikipedia.org/wiki/Barbara_Liskov). 在1974年的GLU语言中提出。该求值策略被用于Python、Java、Ruby、JavaScript等多种语言。
 
 该策略的重点是：调用函数传参时，函数接受对象实参*引用的副本*(而不是对象副本)。 它和按引用传递的不同在于：在共享传递中对函数形参的赋值，不会影响实参的值。如下面例子中，不可以通过修改形参o的值，来修改obj的值。
 
@@ -117,7 +117,7 @@ foo(obj);
 console.log(obj.x); // 仍然是1, obj并未被修改为100.
 {% endhighlight %}
 
-然引用副本与实参引用相同的对象，对象在JS中是可变的(mutable），修改对象中的属性，实参也会受到影响。
+然而实参形参引用相同的对象（虽然引用本身是不同的两个引用，后者是前者的副本），对象在JS中是可变的(mutable），修改对象中的属性，实参也会受到影响。
 
 {% highlight javascript %}
 var obj = {x : 1};
