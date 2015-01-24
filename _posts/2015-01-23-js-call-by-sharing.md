@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 解析JS值的传递方式
+title: JS是按值传递还是按引用传递?
 description: ""
 modified: 2015-01-23
 category: articles
