@@ -29,7 +29,7 @@ image:
 </section><!-- /#table-of-contents -->
 最近遇到个有趣的问题：“JS中的值是按值传递，还是按引用传递呢？”
 
-在分析这个问题之前，我们需了解什么是按值传递(call by value)，什么是按引用传递(call by reference)。在计算机科学里，这个部分叫求值策略(Evaluation Strategy)。它决定变量之间、函数调用时实参和形参之间如值是如何传递的。
+在分析这个问题之前，我们需了解什么是按值传递(call by value)，什么是按引用传递(call by reference)。在计算机科学里，这个部分叫求值策略(Evaluation Strategy)。它决定变量之间、函数调用时实参和形参之间值是如何传递的。
 
 ### 按值传递 VS. 按引用传递
 
