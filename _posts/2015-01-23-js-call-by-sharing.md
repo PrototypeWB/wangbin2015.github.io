@@ -3,8 +3,8 @@ layout: post
 title: JS是按值传递还是按引用传递?
 description: ""
 modified: 2015-01-23
-category: articles
-tags: [JS]
+category: js
+tags: [js,前端]
 imagefeature: cover6.jpg
 image:
   feature: texture-feature-05.jpg

@@ -3,9 +3,9 @@ layout: post
 title: 初探接口管理工具RAP
 description: "本文介绍接口管理&自动化工具RAP要解决的问题、设计思路以及目前的进展。"
 modified: 2014-06-20
-category: articles
+category: automation
 imagefeature: cover10.jpg
-tags: [RAP]
+tags: [rap,前端]
 image:
   feature: texture-feature-05.jpg
   credit: Texture Lovers

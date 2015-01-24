@@ -3,8 +3,8 @@ layout: post
 title: ES6笔记之参数默认值(译)
 description: "在这个简短的笔记中我们聊一聊ES6的又一特性：带默认值的函数参数。正如我们即将看到的，它在某些CASE下会有些微妙的不同。"
 modified: 2014-06-20
-category: articles
-tags: [ES6]
+category: es6
+tags: [es6,js,前端]
 imagefeature: cover3.jpg
 image:
   feature: texture-feature-05.jpg
