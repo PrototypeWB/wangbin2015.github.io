@@ -58,6 +58,7 @@ delete arr[0];
 arr[0]; // undefined
 {% endhighlight %}
 ### 数组 VS. 一般对象
+
 #### 相同点
 * 数组是对象，对象不一定是数组
 * 都可以继承
