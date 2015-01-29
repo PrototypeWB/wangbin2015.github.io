@@ -68,6 +68,7 @@ arr[0]; // undefined
 * 数组自动更新length
 * 数组操作通常被优化
 * 数组对象继承Array.prototype上的大量数组操作方法
+
 ### 稀疏数组
 稀疏数组并不含有从0开始的连续索引。一般length属性值比实际元素个数大。
 {% highlight javascript %}
