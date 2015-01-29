@@ -162,6 +162,7 @@ for (; i < arr.length; i++) {
 // 5
 {% endhighlight %}
 ### 数组方法
+
 #### Array.prototype.join
 {% highlight javascript %}
 var arr = [1, 2, 3];
