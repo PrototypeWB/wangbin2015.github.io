@@ -1,9 +1,9 @@
 title:            WANGBIN
 description:      "keep moving forward"
 logo:             logo.png
-disqus_shortname: bosnme
+disqus_shortname: WANGBIN
 share:            false
-dropcap:          false
+dropcap:          true
 # Change url to your domain. Leave localhost server or blank when working locally.
 # or use the hint from http://jekyllrb.com/docs/github-pages/ to keep this the same 
 # whether working locally or remotely. Start Jekyll with: jekyll serve --baseurl ''
