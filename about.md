@@ -11,4 +11,4 @@ chart: true
   <figcaption>Hi! </figcaption>
 </figure>
 
-My name is **Bosn**, this is my personal blog.
+My name is **WANGBIN**, this is my personal blog.
