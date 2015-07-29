@@ -38,9 +38,9 @@ links:
     url: /
     external: false
     icon: home
-  - title: Featured Posts
+  - title: 精选文章
     url: /featured
-  - title: Categories
+  - title: 博文分类
     url: /categories
   - title: 个人介绍
     url: /about
