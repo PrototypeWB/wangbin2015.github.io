@@ -72,7 +72,7 @@ kramdown:
 
 prose:
   rooturl: '_posts'
-  siteurl: 'http://bosn.me/'
+  siteurl: 'http://wangbin2015.github.io/'
   relativeLinks: 'http://bosn.me/links.jsonp'
   media: 'images'
   metadata:
