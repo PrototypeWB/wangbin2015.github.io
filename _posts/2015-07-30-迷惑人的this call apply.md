@@ -25,8 +25,11 @@ image:
 </div>
 </section><!-- /#table-of-contents -->
 　　因个人知识有限，若发现文章中错误，欢迎发邮件与我进行讨论，邮箱：wangbin2014@hotmail.com　　　   　
-　　欢迎关注我的[github账号][https://github.com/wangbin2015]          
-　　今天的博文封面于2015年5月3日拍摄于大连历史博物馆，她今年8月去美国留学，祝一路顺风。            　　        
+　　欢迎关注我的[https://github.com/wangbin2015][github账号]          
+　　今天的博文封面于2015年5月3日拍摄于大连历史博物馆，她今年8月去美国留学，祝一路顺风。 
+
+***
+           　　        
 　　可能，每一个初学前端的弱鸡都会纠结于arguments、this、call、apply的用法，而我并不纠结，我只是抓狂。慢慢地梳理这几个知识点，其实也是可以理解的，本文部分案例摘选于《JS高级程序设计》。
 
 ### 一、 一切皆因Function而起
