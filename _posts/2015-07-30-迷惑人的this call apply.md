@@ -27,12 +27,12 @@ image:
 每一个初学前端的菜鸡都会纠结于arguments、this、call、apply的用法，像我这样的弱鸡简直抓狂。
 但是慢慢梳理这几个知识点，其实也是可以理解的。
 
-** 一、 一切皆因Function而起
+### 一、 一切皆因Function而起
 
 JavaScript中函数很有意思，每个函数都是Function的实例，与其他引用类型一样有自己的属性和方法。        
 如果是这样，那arguments、this、call、apply、bind又都是什么鬼？       
 
-###二、arguments和this###      
+### 二、arguments和this      
 
 函数执行时自动添加arguments和this两个特殊对象，arguments是一个类数组对象（并不是数组），包含传入函数的所有参数，而this引用的是函数执行的环境对象。        
 正因为arguments是对象，所以arguments有一个名叫callee的属性，该属性是一个指针，指向拥有这个arguments对象的函数本体，可用它解耦实现递归调用。          
