@@ -1,6 +1,6 @@
 ![WANGBIN·BLOG](images/logo.png)
-###关于博文，若有问题或好的观点    
-请联系我：wangbin2014@hotmail.com
+####关于博文，若有问题或好的观点    
+####请联系我：wangbin2014@hotmail.com
 
 ***
 
