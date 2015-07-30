@@ -28,8 +28,7 @@ image:
 
 ### 一、 一切皆因Function而起
 
-　　JavaScript中函数很有意思，每个函数都是Function的实例，与其他引用类型一样有自己的属性和方法。        
-　　如果是这样，那arguments、this、call、apply、bind又都是什么鬼？ 
+　　JavaScript中函数很有意思，每个函数都是Function的实例，与其他引用类型一样有自己的属性和方法。迷惑众人许久的arguments、this、call、apply、bind都是从哪来又扮演什么作用呢？ 
       
 ### 二、arguments和this      
 
@@ -54,12 +53,15 @@ image:
     }         
 
 　　与其他语言大相径庭的是，JavaScript的this总是指向一个对象，而具体指向哪个对象是在运行时基于函数的执行环境动态绑定了，说起来有些拗口。在实际应用中，this的指向分为以下4种：      
+
 * 作为方法的调用     
 * 作为普通函数调用     
 * 构造器调用      
 * call、apply调用     
+
 **1、作为对象方法的调用**            
-　　当函数作为对象的方法被调用时，this指向该对象：          
+　　当函数作为对象的方法被调用时，this指向该对象：   
+       
     var obj={
         a:1,
         getA:function(){
@@ -169,8 +171,8 @@ call必须把参数逐个列举出来，而 apply 另一个参数可以是数组
     sayColor();//red
     sayColor.call(this);//red
     sayColor.call(window);//red
-    sayColor.call(o);//blue
-    
+    sayColor.call(o);//blue      
+            
 　　使用call()或是apply()来扩充作用域最大的好处，就是对象不需要与方法有任何耦合关系。
     
     
