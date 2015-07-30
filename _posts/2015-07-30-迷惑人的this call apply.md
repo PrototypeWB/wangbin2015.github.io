@@ -26,10 +26,12 @@ image:
 </section><!-- /#table-of-contents -->
 每一个初学前端的菜鸡都会纠结于arguments、this、call、apply的用法，像我这样的弱鸡简直抓狂。
 但是慢慢梳理这几个知识点，其实也是可以理解的。
+
 ### 一、 一切皆因Function而起
 
 JavaScript中函数很有意思，每个函数都是Function的实例，与其他引用类型一样有自己的属性和方法。        
-如果是这样，那arguments、this、call、apply、bind又都是什么鬼？       
+如果是这样，那arguments、this、call、apply、bind又都是什么鬼？ 
+      
 ### 二、arguments和this      
 
 函数执行时自动添加arguments和this两个特殊对象，arguments是一个类数组对象（并不是数组），包含传入函数的所有参数，而this引用的是函数执行的环境对象。        
@@ -103,6 +105,7 @@ JavaScript中函数很有意思，每个函数都是Function的实例，与其�
     alert(a.getName.call(b));
     
 具体call和apply怎样区别，会在下面进行叙述。
+
 ### 三、call和apply     
 
 call 和 apply 都是为了改变某个函数运行时的 context 即上下文而存在的，换句话说，就是为了改变函数体内部 this 的指向。
@@ -150,7 +153,7 @@ call必须把参数逐个列举出来，而 apply 另一个参数可以是数组
 用的比较多的，通过document.getElementsByTagName选择的dom 节点是一种类似array的array。它不能应用Array下的push,pop等方法。我们可以通过：
 var domNodes = Array.prototype.slice.call(document.getElementsByTagName("*"));
 这样domNodes就可以应用Array下的所有方法了。
-**2、使用call()和apply()扩充函数作用域**   
+**2、使用call()和apply()扩充函数作用域**     
     window.color='red';
     var o={color:blue};
     function sayColor(){
