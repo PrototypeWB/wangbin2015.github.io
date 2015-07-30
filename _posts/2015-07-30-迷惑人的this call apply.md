@@ -26,6 +26,7 @@ image:
 </section><!-- /#table-of-contents -->
 每一个初学前端的菜鸡都会纠结于arguments、this、call、apply的用法，像我这样的弱鸡简直抓狂。
 但是慢慢梳理这几个知识点，其实也是可以理解的。
+
 ** 一、 一切皆因Function而起
 
 JavaScript中函数很有意思，每个函数都是Function的实例，与其他引用类型一样有自己的属性和方法。        
