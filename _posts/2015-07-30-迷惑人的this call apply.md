@@ -160,7 +160,7 @@ call必须把参数逐个列举出来，而 apply 另一个参数可以是数组
 
     var domNodes = Array.prototype.slice.call(document.getElementsByTagName("*"));
     
-　　这样domNodes就可以应用Array下的所有方法了。
+　　这样domNodes就可以应用Array下的所有方法了。      
 **2、使用call()和apply()扩充函数作用域**     
 
     window.color='red';
